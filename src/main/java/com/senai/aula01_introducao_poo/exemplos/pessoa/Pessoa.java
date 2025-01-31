@@ -14,7 +14,7 @@ public class Pessoa {
     }
 
     public void falar(String frase){
-        System.out.println(nome + " falou: " + frase);
+        System.out.println(nome + " disse: " + frase);
     }
     public void comer(String alimento){
 
