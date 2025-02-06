@@ -7,12 +7,12 @@ public class Endereco {
     String municipio;
     String estado;
 
-    public Endereco(String estado, String municipio, String bairro, int numeroDaRua, String nomeDaRua) {
-        this.estado = estado;
-        this.municipio = municipio;
-        this.bairro = bairro;
-        this.numeroDaRua = numeroDaRua;
+    public Endereco(String nomeDaRua, int numeroDaRua, String bairro, String municipio, String estado) {
         this.nomeDaRua = nomeDaRua;
+        this.numeroDaRua = numeroDaRua;
+        this.bairro = bairro;
+        this.municipio = municipio;
+        this.estado = estado;
     }
 
     @Override
