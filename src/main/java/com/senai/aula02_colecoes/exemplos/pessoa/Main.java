@@ -1,14 +1,15 @@
 package com.senai.aula02_colecoes.exemplos.pessoa;
 
-import com.senai.aula01_introducao_poo.exemplos.concessionaria.Carro;
-
 import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+import java.util.stream.Collectors;
 
 public class Main {
     public static void main(String[] args) {
         Pessoa pessoa1 = new Pessoa("Roger", 20);
-        Pessoa pessoa2 = new Pessoa("André", 30);
-        Pessoa pessoa3 = new Pessoa("Bruno", 94);
+        Pessoa pessoa2 = new Pessoa("andre", 30);
+        Pessoa pessoa3 = new Pessoa("Bruno", 90);
         Pessoa pessoa4 = new Pessoa("Allan", 10);
 
         Pessoa[] matrizPessoa = new Pessoa[4];
@@ -39,21 +40,39 @@ public class Main {
 
         ArrayList<Pessoa> listaPessoas = new ArrayList(); //lista apenas da classe Pessoa
         listaPessoas.add(pessoa1);
-        listaPessoas.add(new Pessoa("Pedro",34));
+        listaPessoas.add(new Pessoa("Pedro", 34));
 
-        System.out.println("tamanho da lista: "+listaPessoas.size());
-
+        System.out.println("tamanho da lista: " + listaPessoas.size());
         listar(listaPessoas);
         listaPessoas.remove(pessoa1);
         listar(listaPessoas);
 
-        listaPessoas.set(0,pessoa2);
+        listaPessoas.set(0, pessoa2);
         listar(listaPessoas);
 
-        listaPessoas.add(0,pessoa3);
+        listaPessoas.add(0, pessoa3);
+        listar(listaPessoas);
+        System.out.println("-------------teste add-----------------");
+        listaPessoas.forEach(System.out::println);
+
+        List<Pessoa> listaFiltrada = listaPessoas.stream().filter(p -> p.nome.toLowerCase().contains("br")).toList();
+        System.out.println("-----------teste List<>--------------");
+        listaFiltrada.forEach(System.out::println);
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Insira as informações a seguir");
+        System.out.println("Nome: ");
+        String nome = scanner.nextLine();
+        System.out.println("Idade: ");
+        int idd = scanner.nextInt();
+        listaPessoas.add(new Pessoa(nome, idd));
+        listar(listaPessoas);
+
+
     }
-    public static void listar(ArrayList<Pessoa> lista){
-        for (Pessoa pessoa:lista){
+
+    public static void listar(ArrayList<Pessoa> lista) {
+        for (Pessoa pessoa : lista) {
             System.out.println(pessoa);
         }
     }
