@@ -10,6 +10,11 @@ public class Main {
                 0.0f,
                 30
         );
+        Aluno aluno2 = new Aluno(
+                "Bruno",
+                0.0f,
+                89
+        );
 
         String escolha;
         float notaNova;
@@ -21,6 +26,13 @@ public class Main {
 
         aluno1.atualizaNota(escolha, notaNova);
         aluno1.exibirInformacoes();
-        aluno1.verificarAprovacao();
+        boolean aprovacao = aluno1.verificarAprovacao();
+        if (aprovacao) {
+            System.out.println("O aluno foi aprovado na sua disciplina!");
+
+        } else if (!aprovacao) {
+            System.out.println("O aluno foi reprovado na sua disciplina.");
+        }
+
     }
 }

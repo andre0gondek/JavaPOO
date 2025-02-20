@@ -14,24 +14,25 @@ public class Aluno {
     }
 
     public void exibirInformacoes() {
-        System.out.printf("Aluno: %s\nIdade do aluno: %d\nNota do aluno: %f",nome, idade, nota);
+        System.out.printf("Aluno: %s\nIdade do aluno: %d\nNota do aluno: %,1f",nome, idade, nota);
     }
 
     public void atualizaNota(String escolha, float notaNova) {
         if (escolha.equals("s")){
             nota = notaNova;
-            System.out.printf("A nova nota do aluno é: %f", nota);
+            System.out.printf("A nova nota do aluno é: %f. ", nota);
         } else if (escolha.equals("n")) {
-            System.out.println("A nota permanecerá a mesma.");
+
         }
     }
 
-    public void verificarAprovacao() {
+    public boolean verificarAprovacao() {
         if (nota >= 6.0){
-            System.out.println("O aluno foi aprovado na sua disciplina!");
+            return true;
         } else if (nota < 6.0) {
-            System.out.println("O aluno foi reprovado na sua disciplina.");
+            return false;
         }
+        return false;
     }
 
 }
