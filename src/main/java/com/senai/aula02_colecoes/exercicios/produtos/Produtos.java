@@ -8,4 +8,11 @@ public class Produtos {
         this.nomeProduto = nomeProduto;
         this.qtdEstoque = qtdEstoque;
     }
+
+
+    @Override
+    public String toString() {
+        return "Produto= " + nomeProduto + "\n" +
+                "Estoque= " + qtdEstoque + "\n";
+    }
 }

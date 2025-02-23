@@ -1,8 +1,10 @@
 package com.senai.aula02_colecoes.exercicios.produtos;
 
+import com.senai.aula02_colecoes.exemplos.pessoa.Pessoa;
 import com.senai.aula02_colecoes.exercicios.tarefas.Tarefas;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class Main {
@@ -34,10 +36,10 @@ public class Main {
                     cadastrarProduto();
                     break;
                 case 2:
-
+                    listarProduto();
                     break;
                 case 3:
-
+                    atualizarProduto();
                     break;
                 case 4:
 
@@ -58,9 +60,16 @@ public class Main {
     }
 
     public static void listarProduto() {
-        System.out.println("----Lista----");
-        for (int i = 0; i < cadastroProtudos.size(); i++) {
-            System.out.println(i);
+        System.out.println("--Lista--");
+        System.out.println(cadastroProtudos.toString());
+        }
+        public static void atualizarProduto(){
+            System.out.println("Qual produto você deseja atualizar?");
+            listarProduto();
+            int resposta1 = scanner.nextInt();
+            System.out.println("Digite a o nome do produto, e a nova quantidade em estoque.");
+            String nome = scanner.nextLine();
+            int novaQtd = scanner.nextInt();
+            cadastroProtudos.set(resposta1, new Produtos(nome,novaQtd));
         }
     }
-}
