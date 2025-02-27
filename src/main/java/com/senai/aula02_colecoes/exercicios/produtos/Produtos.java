@@ -9,10 +9,13 @@ public class Produtos {
         this.qtdEstoque = qtdEstoque;
     }
 
+    public Produtos(int qtdEstoque) {
+        this.qtdEstoque = qtdEstoque;
+    }
 
     @Override
     public String toString() {
-        return "Produto= " + nomeProduto + "\n" +
-                "Estoque= " + qtdEstoque + "\n";
+        return "Produto: " + nomeProduto + " | " +
+                "Estoque: " + qtdEstoque;
     }
 }
