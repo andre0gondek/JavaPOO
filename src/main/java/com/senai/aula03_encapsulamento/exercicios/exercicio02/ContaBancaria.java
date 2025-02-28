@@ -25,9 +25,6 @@ public class ContaBancaria {
          }else throw new IllegalArgumentException("Seu saldo não é suficiente para este saque. Operação cancelada.");
     }
 
-    public double getSaldo(){
-        return saldo;
-    }
 
     @Override
     public String toString() {

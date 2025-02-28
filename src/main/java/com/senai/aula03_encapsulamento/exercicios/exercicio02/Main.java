@@ -19,7 +19,7 @@ public class Main {
                 double valor = scanner.nextDouble();
                 conta.sacar(valor);
             } else if (escolha == 3) {
-                System.out.println("Encerrando o programa...");
+                System.out.println("Operação finalizada.");
             } else System.out.println("Opção inválida.");
 
 
