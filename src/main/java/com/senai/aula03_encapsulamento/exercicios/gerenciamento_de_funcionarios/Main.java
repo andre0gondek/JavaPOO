@@ -1,4 +1,4 @@
-package com.senai.aula03_encapsulamento.exercicios.exercicio03;
+package com.senai.aula03_encapsulamento.exercicios.gerenciamento_de_funcionarios;
 
 import java.util.ArrayList;
 import java.util.Objects;
@@ -8,39 +8,14 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         ArrayList<String> listaCargos = new ArrayList<>();
-        listaCargos.set(1, "Gerente");
-        listaCargos.set(3, "Analista");
+        listaCargos.set(0, "Gerente");
+        listaCargos.set(1, "Analista");
         listaCargos.set(2, "Programar");
 
-        Funcionario funcionario1 = new Funcionario("João", listaCargos.get(1));
-        Funcionario funcionario2 = new Funcionario("Gabriel", listaCargos.get(3));
-        Funcionario funcionario3 = new Funcionario("Bruno", listaCargos.get(2));
+        Funcionario funcionario1 = new Funcionario("João");
+        Funcionario funcionario2 = new Funcionario("Gabriel");
+        Funcionario funcionario3 = new Funcionario("Bruno");
 
-        /*//alterar cargo de funcionário
-        System.out.println("Qual cargo de qual funcionario deseja alterar?\n1-"
-                +funcionario1.getNome() + "\n2-" + funcionario2.getNome() + "\n3-" + funcionario3.getNome());
-        int opcao = scanner.nextInt();
-        scanner.nextLine();
-        switch (opcao){
-
-            case 1: System.out.println("Digite o cargo a ser alterado.");
-                String novoCargo = scanner.nextLine();
-                funcionario1.setCargo(novoCargo);
-                funcionario1.getCargo();
-                break;
-
-            case 2: System.out.println("Digite o cargo a ser alterado.");
-                String novoCargo2 = scanner.nextLine();
-                funcionario2.setCargo(novoCargo2);
-                funcionario2.getCargo();
-                break;
-
-            case 3: System.out.println("Digite o valor a ser alterado.");
-                String novoCargo3 = scanner.nextLine();
-                funcionario3.setCargo(novoCargo3);
-                funcionario3.getCargo();
-                break;
-        }*/
 
         //alterar salário de funcionários
         System.out.println("Você deseja alterar o salário de algum funcionario?(s/n)");

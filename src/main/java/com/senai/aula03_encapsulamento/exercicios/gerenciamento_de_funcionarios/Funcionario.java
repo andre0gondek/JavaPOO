@@ -1,22 +1,19 @@
-package com.senai.aula03_encapsulamento.exercicios.exercicio03;
-
-import java.util.Objects;
+package com.senai.aula03_encapsulamento.exercicios.gerenciamento_de_funcionarios;
 
 public class Funcionario {
     private String nome;
     private double salario;
     private String cargo;
 
-    public Funcionario(String nome, String cargo) {
+    public Funcionario(String nome) {
         this.nome = nome;
-        this.cargo = cargo;
     }
 
 
     //setters
     public void setNome(String nome) {
         if (nome == null){
-            throw new IllegalArgumentException("O nome não pode ser nulo.");
+            throw new IllegalArgumentException("O nome não pode estar vazio.");
         }else this.nome = nome;
     }
 
@@ -27,7 +24,8 @@ public class Funcionario {
         this.salario = salario;
     }
 
-    public void setCargo(String cargo) {
+    public void setCargo(String listaCargos) {
+
         this.cargo = cargo;
     }
     //getters
