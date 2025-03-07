@@ -10,7 +10,7 @@ public class Produtos {
             if (precoProduto >= 0){
                 this.precoProduto = precoProduto;
             }else {
-                throw new IllegalArgumentException("O valor não pode ser negativo. O valor atribuido ao produto será R$0,00");
+                System.out.println("O valor não pode ser negativo. O valor atribuido ao produto será R$0,00");
             }
             this.nomeProduto = nomeProduto;
         }
@@ -24,7 +24,7 @@ public class Produtos {
             if (precoProduto >= 0){
                 this.precoProduto = precoProduto;
             }else {
-                throw new IllegalArgumentException("O valor não pode ser negativo.");
+                System.out.println("O valor não pode ser negativo.");
             }
         }
 

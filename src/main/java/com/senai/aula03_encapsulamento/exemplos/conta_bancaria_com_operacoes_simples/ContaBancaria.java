@@ -31,7 +31,7 @@ public class ContaBancaria {
 
     }
     public void sacar(double valor){
-         if (valor <= saldo) {
+         if (valor <= saldo && valor > 0) {
              saldo -= valor;
              System.out.println("Saque realizado com sucesso na conta do titular " + titular + ". Seu saldo atual é de: " + saldo);
          }else System.out.println("Seu saldo não é suficiente para este saque. Operação cancelada.");

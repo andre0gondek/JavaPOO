@@ -9,8 +9,9 @@ public class ContaBancaria {
     public ContaBancaria(String titular, double saldo) {
         this.titular = titular;
         if (saldo >= 0) {
-        this.saldo = saldo;
-        } else throw new IllegalArgumentException("O saldo deve ser maior ou igual a zero. Seu saldo iniciará com R$0,00.");
+            this.saldo = saldo;
+        } else
+            throw new IllegalArgumentException("O saldo deve ser maior ou igual a zero. Seu saldo iniciará com R$0,00.");
     }
 
     public void setSaldo(double saldo) {
@@ -18,33 +19,25 @@ public class ContaBancaria {
     }
 
     public void depositar(double valor) {
-        if (valor >= 0){
+        if (valor >= 0) {
             saldo += valor;
             System.out.println("Seu saldo atual é de: " + this.saldo);
         } else throw new IllegalArgumentException("O valor deve ser positivo. Operação cancelada.");
 
     }
-    public void sacar(double valor){
-         if (valor <= saldo) {
-             saldo -= valor;
-        System.out.println("Seu saldo atual é de: " + this.saldo);
-         }else throw new IllegalArgumentException("Seu saldo não é suficiente para este saque. Operação cancelada.");
+
+    public boolean sacar(double valor) {
+        if (valor <= saldo) {
+            saldo -= valor;
+            System.out.println("O saldo atual do titular " + this.titular + " é de: " + this.saldo);
+        } else throw new IllegalArgumentException("Seu saldo não é suficiente para este saque. Operação cancelada.");
+        return true;
     }
 
-    public void transferencia(double valor, ContaBancaria contaDestino){
-
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (o == null || getClass() != o.getClass()) return false;
-        ContaBancaria that = (ContaBancaria) o;
-        return Objects.equals(titular, that.titular);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hashCode(titular);
+    public void transferencia(double valor, ContaBancaria contaDestino) {
+        if (this.sacar(valor)) {
+            contaDestino.depositar(valor);
+        }
     }
 
     @Override
@@ -53,4 +46,5 @@ public class ContaBancaria {
                 "Titular=" + titular +
                 "\nSaldo=" + saldo;
     }
+
 }
