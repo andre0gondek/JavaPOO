@@ -26,7 +26,7 @@ public class Tarefas {
 
     public void lerTarefas() {
         for (Tarefas listaTarefa : listaTarefas) {
-            System.out.printf("Tarefa: %s \nConcluída= %b \n", listaTarefa.nomeTarefa, listaTarefa.status);
+            System.out.printf("Tarefa: %s \nConcluída= %b \n", listaTarefa.nomeTarefa, (listaTarefa.status? "SIM":"NÃO"));
         }
         System.out.println("");//espaço para proxima linha
 

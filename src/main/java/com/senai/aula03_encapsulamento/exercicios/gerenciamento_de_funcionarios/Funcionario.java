@@ -7,9 +7,10 @@ public class Funcionario {
     private double salario;
     private String cargo;
 
-
-
     public Funcionario(String nome, double salario, String cargo, ArrayList<String> listaCargos) {
+        listaCargos.add("gerente");
+        listaCargos.add("programador");
+        listaCargos.add("analista");
         if (nome == null) {
             throw new IllegalArgumentException("O nome não pode estar vazio.");
         } else this.nome = nome;

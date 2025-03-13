@@ -7,11 +7,6 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         ArrayList<String> listaCargos = new ArrayList<>();
-        listaCargos.add("gerente");
-        listaCargos.add("programador");
-        listaCargos.add("analista");
-
-
 
         Scanner scanner = new Scanner(System.in);
         Funcionario funcionario1 = new Funcionario("João", 1400.0, "gerente", listaCargos);

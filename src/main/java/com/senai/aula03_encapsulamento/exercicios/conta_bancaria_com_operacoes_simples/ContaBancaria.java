@@ -3,8 +3,8 @@ package com.senai.aula03_encapsulamento.exercicios.conta_bancaria_com_operacoes_
 import java.util.Objects;
 
 public class ContaBancaria {
-    private String titular;
-    private double saldo;
+    protected String titular;
+    protected double saldo;
 
     public ContaBancaria(String titular, double saldo) {
         this.titular = titular;
