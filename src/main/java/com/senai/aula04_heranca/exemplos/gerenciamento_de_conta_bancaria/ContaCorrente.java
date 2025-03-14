@@ -1,12 +1,11 @@
 package com.senai.aula04_heranca.exemplos.gerenciamento_de_conta_bancaria;
 
-import com.senai.aula03_encapsulamento.exercicios.conta_bancaria_com_operacoes_simples.ContaBancaria;
-
 public class ContaCorrente extends ContaBancaria {
     private double limite;
 
-    public ContaCorrente(String titular, double saldo) {
-        super(titular, saldo);
+    public ContaCorrente(double saldo, String titular, double limite) {
+        super(saldo, titular);
+        this.limite = limite;
     }
 
     public double getLimite() {
@@ -19,10 +18,14 @@ public class ContaCorrente extends ContaBancaria {
 
     @Override
     public boolean sacar(double valor) {
-        if (valor <= saldo + limite) {
+        if (valor <= (saldo + limite) && valor > 0) {
             saldo -= valor;
-            System.out.println("O saldo atual do titular " + this.titular + " é de: " + this.saldo);
-        } else throw new IllegalArgumentException("Seu saldo não é suficiente para este saque. Operação cancelada.");
-        return false;
+            System.out.println("Saque realizado com sucesso do titular " + getTitular() + "! \nSaldo Atual R$" + saldo);
+            return true;
+        } else {
+            System.out.println("Saldo insuficiente!");
+            return false;
+        }
     }
 }
+

@@ -30,12 +30,15 @@ public class ContaBancaria {
 
     }
 
-    public boolean sacar(double valor) {
-        if (valor <= saldo) {
+    public boolean sacar(double valor){
+        if (valor <= saldo && valor > 0){
             saldo -= valor;
-            System.out.println("O saldo atual do titular " + this.titular + " é de: " + this.saldo);
-        } else throw new IllegalArgumentException("Seu saldo não é suficiente para este saque. Operação cancelada.");
-        return true;
+            System.out.println("Saque realizado com sucesso do titular "+titular+"! \nSaldo Atual R$"+saldo);
+            return true;
+        }else {
+            System.out.println("Saldo insuficiente!");
+            return false;
+        }
     }
     public void exibirSaldo(){
         System.out.printf("Titular: %s , Saldo: R$%,.2f\n", titular, saldo);
