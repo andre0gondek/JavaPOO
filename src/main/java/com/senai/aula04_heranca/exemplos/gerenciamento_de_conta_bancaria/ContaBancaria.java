@@ -5,7 +5,9 @@ public class ContaBancaria {
     protected double saldo;
 
     public ContaBancaria(double saldo, String titular) {
-        this.saldo = saldo;
+        if (saldo >= 0) {
+            this.saldo = saldo;
+        } else throw new IllegalArgumentException("O saldo deve ser maior ou igual a zero. Seu saldo iniciará com R$0,00.");
         this.titular = titular;
     }
 

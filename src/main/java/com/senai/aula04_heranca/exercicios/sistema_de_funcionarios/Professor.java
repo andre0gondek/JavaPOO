@@ -7,4 +7,21 @@ public class Professor extends Funcionario{
         super(nome, salario);
         this.disciplina = disciplina;
     }
+
+    public String getDisciplina() {
+        return disciplina;
+    }
+
+    @Override
+    public String getNome() {
+        return super.getNome();
+    }
+
+    @Override
+    public String toString() {
+        return "\nNome: " + getNome() +
+                "\nSalario: " + getSalario() +
+                "\nDisciplina: " + disciplina +
+                "\n---------------------------";
+    }
 }

@@ -9,4 +9,12 @@ public class Coordenador extends Funcionario{
         super(nome, salario);
         this.equipeProfessores = equipeProfessores;
     }
+
+    @Override
+    public String toString() {
+        return "\nNome do Coordenador: " + getNome() +
+                "\nSalário: " + getSalario() +
+                "\nEquipe de professores deste coordenador: " + equipeProfessores +
+                "\n---------------------------";
+    }
 }
