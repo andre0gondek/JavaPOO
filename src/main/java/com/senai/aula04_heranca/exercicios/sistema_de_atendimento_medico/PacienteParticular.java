@@ -7,4 +7,8 @@ public class PacienteParticular extends Paciente{
         super(nome, idade);
         this.custoConsulta = custoConsulta;
     }
+
+    public int getCustoConsulta() {
+        return custoConsulta;
+    }
 }

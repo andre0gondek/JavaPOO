@@ -10,7 +10,7 @@ public class Main {
 
     public static void testarSomAnimal(Animal animal){
         animal.fazerSom();
-        Pato pato = ( Pato) animal;
+        Pato pato = (Pato) animal;
         pato.voar();
     }
 

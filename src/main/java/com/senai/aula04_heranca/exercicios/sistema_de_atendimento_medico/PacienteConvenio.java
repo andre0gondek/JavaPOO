@@ -7,4 +7,9 @@ public class PacienteConvenio extends Paciente{
         super(nome, idade);
         this.desconto = desconto;
     }
+    public void aplicarDesconto(int valorConsulta){
+        int divisao = desconto/100;
+        valorConsulta = valorConsulta * divisao;
+    }
+
 }

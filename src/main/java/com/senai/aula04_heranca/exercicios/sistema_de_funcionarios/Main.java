@@ -11,6 +11,7 @@ public class Main {
          Professor professor1 = new Professor("Thiago",6000.0,"Matemática Aplicada");
          Professor professor2 = new Professor("Marco Antônieto", 6000.0,"Noções de Direito");
          Professor professor3 = new Professor("Rafael",6000.0,"LOPAlPython");
+
          Professor professor4 = new Professor("Alberto",6000.0,"Programação web");
          Professor professor5 = new Professor("Julieta", 6000.0,"Redes");
          Professor professor6 = new Professor("Felipe",6000.0,"Sistema Operacional");
