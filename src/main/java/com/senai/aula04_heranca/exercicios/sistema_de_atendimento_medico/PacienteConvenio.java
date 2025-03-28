@@ -7,9 +7,11 @@ public class PacienteConvenio extends Paciente{
         super(nome, idade);
         this.desconto = desconto;
     }
-    public void aplicarDesconto(int valorConsulta){
-        int divisao = desconto/100;
-        valorConsulta = valorConsulta * divisao;
+    public void aplicarDesconto(double valorConsulta){
+        double divisao = (double) desconto /100;
+        valorConsulta -= valorConsulta * divisao;
+        System.out.println("Que demais! Você recebeu um desconto de " + desconto + "%!");
+        System.out.printf("O total de sua consulta será de R$%,.2f!", valorConsulta);
     }
 
 }
