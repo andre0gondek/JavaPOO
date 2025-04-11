@@ -4,8 +4,6 @@ public class Beneficios {
     private int salario;
     private double desconto;
 
-
-
     public void descontar(double desconto, int salario){
         System.out.println("Salário Bruto: R$" + salario);
         desconto = desconto/100;

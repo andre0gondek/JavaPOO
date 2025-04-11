@@ -6,4 +6,5 @@ public class PlanoDeSaude extends Beneficios{
         System.out.println("---Desconto Plano de Saúde---");
         super.descontar(desconto, salario);
     }
+
 }
