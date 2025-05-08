@@ -20,7 +20,7 @@ public class SupervisorController {
         return false;
     }
     public boolean atualizarSupervisor(Supervisor supervisor){
-        if (operador != null) {
+        if (supervisor != null) {
             supervisorDao.atualizar(supervisor);
             return true;
         }

@@ -6,9 +6,9 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        GerarJSON arquivoJson = new GerarJSON(new File("src\\main\\java\\com\\senai\\aula05_polimorfismo\\exercicios\\sistema_de_relatorios\\relatorios\\relatorio.json"));
-        GerarPDF arquivoPdf = new GerarPDF(new File("src\\main\\java\\com\\senai\\aula05_polimorfismo\\exercicios\\sistema_de_relatorios\\relatorios\\relatorio.pdf"));
-        GerarCSV arquivoCsv = new GerarCSV(new File("src\\main\\java\\com\\senai\\aula05_polimorfismo\\exercicios\\sistema_de_relatorios\\relatorios\\relatorio.csv"));
+        GerarJSON arquivoJson = new GerarJSON(new File("src\\main\\java\\com\\senai\\aula05_polimorfismo\\exercicios\\sistema_de_relatorios\\relatorio.json"));
+        GerarPDF arquivoPdf = new GerarPDF(new File("src\\main\\java\\com\\senai\\aula05_polimorfismo\\exercicios\\sistema_de_relatorios\\relatorio.pdf"));
+        GerarCSV arquivoCsv = new GerarCSV(new File("src\\main\\java\\com\\senai\\aula05_polimorfismo\\exercicios\\sistema_de_relatorios\\relatorio.csv"));
 
         System.out.println("Deseja deletar os arquivos para gerar novamente? (s/n)");
         String escolha = scanner.nextLine();

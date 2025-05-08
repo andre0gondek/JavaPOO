@@ -96,14 +96,16 @@ public class Main {
                     scanner.nextLine();
 
                     System.out.println("Atualize as informações: ");
-                    System.out.println("Nome: ");
+                    System.out.print("Nome: ");
                     nome = scanner.nextLine();
 
                     if (escolhaTipo == 1) {
+                        System.out.print("Setor: ");
                         String setor = scanner.nextLine();
                     Operador operador = new Operador(nome, id, setor);
                     opController.atualizarOperador(operador);
                     } else if (escolhaTipo == 2) {
+                        System.out.print("Area: ");
                         String area = scanner.nextLine();
                     Supervisor supervisor = new Supervisor(nome, id, area);
                     supController.atualizarSupervisor(supervisor);
